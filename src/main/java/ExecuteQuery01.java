@@ -7,7 +7,7 @@ public class ExecuteQuery01 {
 
         //n02-ADIM:bağlantıyı oluşturma: db url,kullanıcı adı,password
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_dt",
-                "techpro","password");
+                "techpro","pasword");
 
 
         //n03-ADIM:Statement oluşturma:SQL ifadelerini veritabanına
