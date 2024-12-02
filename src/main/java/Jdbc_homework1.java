@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;  */
 ////ÖDEV:Puanı taban puanlarının ortalamasından yüksek olan öğrencilerin isim ve puanlarını listeleyiniz.
 //2-Ana Sınıf ve Yöntem:----(Class and Method Definition)
-public class Jbc_homework1 {
+public class Jdbc_homework1 {
     public static void main(String[] args) throws SQLException {
 
         //3--sql sorgusu---------(SQL Query Definition)
