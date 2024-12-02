@@ -21,7 +21,7 @@ public class Execute01 {
         // için tüm yöntemleri içerir. Connection, yani veritabanıyla
         // yapılan tüm iletişim yalnızca bağlantı nesnesi aracılığıyla yapılır.
         Connection connection =DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_dt",
-                "techpro","password");
+                "techpro","pasword");
 
 
         //n03-ADIM:Statement oluşturma:SQL ifadelerini veritabanına

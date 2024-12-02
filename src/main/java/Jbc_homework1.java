@@ -13,7 +13,7 @@ public class Jbc_homework1 {
 
         //3--sql sorgusu---------(SQL Query Definition)
 
-        String sql4 = "SELECT name,score from students where score >(SELECT AVG(score) from students)";
+        String sql4 = "SELECT isim,puan from ogrenciler where puan >(SELECT AVG(puan) from ogrenciler)";
 
         //4--Veritabanı Bağlantısı:------------------------------(Establishing Database Connection)
         try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_dt",
@@ -26,13 +26,13 @@ public class Jbc_homework1 {
              ResultSet rs = pstmt.executeQuery()) {
             System.out.println("Taban puanın ortalamasından yüksek puan alan öğrenciler:");
 
-           //7-Sonucların Işlenmesi -----------------------------(Processing ResultSet)
+            //7-Sonucların Işlenmesi -----------------------------(Processing ResultSet)
             while (rs.next()) {
-                String name = rs.getString("name");
-                int score = rs.getInt("score");
+                String name = rs.getString("isim");
+                int score = rs.getInt("puan");
                 System.out.println("İsim: " + name + ", Puan: " + score);
             }
-        //8- Hata Yönetimi------------------------------(Error Handling)
+            //8- Hata Yönetimi------------------------------(Error Handling)
         } catch (SQLException e) {
             e.printStackTrace(); // Hata durumunda hata mesajını yazdır
         }
@@ -40,5 +40,5 @@ public class Jbc_homework1 {
         //9-Başarı mesajı   ---------------------------------------(Success Message)
         System.out.println("success");
     }
-
 }
+
